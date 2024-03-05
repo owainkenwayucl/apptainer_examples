@@ -6,7 +6,13 @@ This can be built on Myriad without being `root`!
 
 ## Instructions:
 
-Clone this repository onto your home area on Myriad (other RC systems are available). Change directory to this directory and then:
+Clone this repository onto your home area on Myriad (other RC systems are available). Change directory to this directory and then add Apptainer to your environment:
+
+```shell
+$ module load apptainer
+```
+
+This will set up some temporary directories - for example a cache directory in your Scratch space.
 
 ### Build:
 
