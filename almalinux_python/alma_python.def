@@ -1,0 +1,23 @@
+Bootstrap: docker
+From: almalinux:latest
+Stage: build
+
+%files
+	./pi.py /pi.py
+
+%post
+	chmod 644 /pi.py
+	dnf update -y
+	dnf install -y 'dnf-command(config-manager)'
+	dnf config-manager --set-enabled crb
+	dnf install -y epel-release
+	dnf install -y python3 python3-pip python3-virtualenv
+	virtualenv /runtime
+	source /runtime/bin/activate
+	pip install --upgrade pip
+	pip install numba
+%runscript
+	source /runtime/bin/activate
+	python3 /pi.py
+
+
