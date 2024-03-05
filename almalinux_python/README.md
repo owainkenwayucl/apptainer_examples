@@ -2,7 +2,11 @@
 
 This example contains an Apptainer "definition" file [`alma_python.def`](./alma_python.def) which builds a container with the latest version of AlmaLinux (at time of writing 9.3), and a virtualenv with Numba and which runs the Numba enabled [Python Example](https://github.com/UCL-RITS/pi_examples/tree/master/python3_numba_pi_dir).
 
+This can be built on Myriad without being `root`!
+
 ## Instructions:
+
+Clone this repository onto your home area on Myriad (other RC systems are available). Change directory to this directory and then:
 
 ### Build:
 
